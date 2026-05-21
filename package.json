@@ -1,0 +1,39 @@
+{
+  "name": "pump-monitor-electron",
+  "version": "1.0.0",
+  "description": "Pump Monitor Desktop App",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "build:win": "electron-vite build && electron-builder --win --config"
+  },
+  "dependencies": {
+    "mqtt": "^5.15.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.6.0",
+    "zustand": "^5.0.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.11"
+  },
+  "build": {
+    "appId": "com.pumpmonitor.desktop",
+    "productName": "Pump Monitor",
+    "win": {
+      "target": "nsis",
+      "icon": "resources/icon.ico"
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}
